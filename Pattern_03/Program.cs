@@ -8,6 +8,8 @@ using Pattern_03.Flyweight;
 
 
 
+
+
 //TemplateMethod
 Console.WriteLine("");
 Console.WriteLine("Pattern_03.TemplateMethod");
