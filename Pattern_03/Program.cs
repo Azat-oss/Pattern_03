@@ -4,6 +4,7 @@ using Pattern_03.Mediator;
 using Pattern_03.Iterator;
 using Pattern_03.Chain_of_Responsibility;
 using Pattern_03.Bridge;
+using Pattern_03.Flyweight;
 
 
 
@@ -104,3 +105,15 @@ abstractionA.Operation();
 IImplementation implementationB = new ConcreteImplementationB();
 Abstraction abstractionB = new RefinedAbstraction(implementationB);
 abstractionB.Operation();
+// Flyweight
+Console.WriteLine("");
+Console.WriteLine("Pattern_03.Flyweight");
+Console.WriteLine("");
+CharacterFactory factory = new CharacterFactory();
+var text = "HELLO FLYWEIGHT";
+
+foreach (char c in text)
+{
+    ICharacter character = factory.GetCharacter(c, "Arial");
+    character.Display(12);  
+}
