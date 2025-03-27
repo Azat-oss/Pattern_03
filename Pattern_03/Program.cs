@@ -3,6 +3,8 @@ using Pattern_03.State;
 using Pattern_03.Mediator;
 using Pattern_03.Iterator;
 using Pattern_03.Chain_of_Responsibility;
+using Pattern_03.Bridge;
+
 
 
 //TemplateMethod
@@ -90,3 +92,15 @@ Request request3 = new Request(3);
 handlerA.HandleRequest(request1);
 handlerA.HandleRequest(request2);
 handlerA.HandleRequest(request3);
+
+// Bridge
+Console.WriteLine("");
+Console.WriteLine("Pattern_03.Bridge");
+Console.WriteLine("");
+IImplementation implementationA = new ConcreteImplementationA();
+Abstraction abstractionA = new RefinedAbstraction(implementationA);
+abstractionA.Operation();
+
+IImplementation implementationB = new ConcreteImplementationB();
+Abstraction abstractionB = new RefinedAbstraction(implementationB);
+abstractionB.Operation();
